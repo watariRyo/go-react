@@ -122,6 +122,7 @@ dist
 # local data
 docker/mysql/data
 backend/source/*
+backend/uploads/*
 
 # other
 .DS_Store
