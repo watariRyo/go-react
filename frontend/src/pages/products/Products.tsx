@@ -62,7 +62,7 @@ const Products = () => {
                   <td>
                     <div className="btn-group mr-2">
                       <Link
-                        to={`/roles/edit/${p.id}`}
+                        to={`/products/edit/${p.id}`}
                         className="btn btn-sm btn-outline-secondary"
                       >
                         Edit

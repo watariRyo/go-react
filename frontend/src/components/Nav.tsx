@@ -1,29 +1,13 @@
-import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { User } from "../models/user";
+import { useSelector } from "../redux/store";
 
 const Nav = () => {
-  const [user, setUser] = useState(new User());
-
-  useEffect(() => {
-    (async () => {
-      const { data } = await axios.get("user");
-      setUser(
-        new User(
-          data.id,
-          data.first_name,
-          data.last_name,
-          data.email,
-          data.role
-        )
-      );
-    })();
-  }, []);
-
   const logout = async () => {
     await axios.post("logout", {});
   };
+
+  const user = useSelector((state) => state.user);
 
   return (
     <nav className="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">

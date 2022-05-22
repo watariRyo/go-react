@@ -11,14 +11,14 @@ type Order struct {
 	Total int `json:"total" gorm:"-"`
 	UpdatedAt string `json:"updated_at"`
 	CreatedAt string `json:"created_at"`
-	OrderItems []OrderItem `json:"order_item" gorm:"foreignKey:OrderId"`
+	OrderItems []OrderItem `json:"order_items" gorm:"foreignKey:OrderId"`
 }
 
 type OrderItem struct {
 	Id uint `json:"id"`
 	OrderId uint `json:"order_id"`
 	ProductTitle string `json:"product_title"`
-	Price float32 `json:"Pirce"`
+	Price float32 `json:"price"`
 	Quantity uint `json:"quantity"`
 }
 
