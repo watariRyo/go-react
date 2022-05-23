@@ -123,6 +123,7 @@ dist
 docker/mysql/data
 backend/source/*
 backend/uploads/*
+backend/out
 
 # other
 .DS_Store
